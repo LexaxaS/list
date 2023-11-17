@@ -1,0 +1,28 @@
+digraph
+{
+rankdir = LR;
+node[shape = record, color = "#000000", fontname = "Sans Bold Not-Rotated", fontsize = 10];
+bgcolor = "#5e67d4";
+ROOT[style = "filled", fillcolor = "#c25a90", label = "ROOT|{<head>head = 1|<tail>tail = 8}"];
+FREE[style = "filled", fillcolor = "#b9e793", label = "FREE|<free>free = 6"];
+CELL_1[style = "filled", fillcolor = "#faa116", label = "index = 1|value\n 1|{prev = 0|next = 2}"];
+CELL_2[style = "filled", fillcolor = "#faa116", label = "index = 2|value\n 2|{prev = 1|next = 3}"];
+CELL_3[style = "filled", fillcolor = "#faa116", label = "index = 3|value\n 3|{prev = 2|next = 4}"];
+CELL_4[style = "filled", fillcolor = "#faa116", label = "index = 4|value\n 4|{prev = 3|next = 5}"];
+CELL_5[style = "filled", fillcolor = "#faa116", label = "index = 5|value\n 5|{prev = 4|next = 10}"];
+CELL_6[style = "filled", fillcolor = "#faa116", label = "index = 6|value\n FREE|{prev = FREE|next = 11}"];
+CELL_7[style = "filled", fillcolor = "#faa116", label = "index = 7|value\n 7|{prev = 9|next = 8}"];
+CELL_8[style = "filled", fillcolor = "#faa116", label = "index = 8|value\n 8|{prev = 7|next = 0}"];
+CELL_9[style = "filled", fillcolor = "#faa116", label = "index = 9|value\n 0|{prev = 10|next = 7}"];
+CELL_10[style = "filled", fillcolor = "#faa116", label = "index = 10|value\n 100|{prev = 5|next = 9}"];
+CELL_11[style = "filled", fillcolor = "#faa116", label = "index = 11|value\n FREE|{prev = FREE|next = 12}"];
+CELL_12[style = "filled", fillcolor = "#faa116", label = "index = 12|value\n FREE|{prev = FREE|next = 13}"];
+CELL_13[style = "filled", fillcolor = "#faa116", label = "index = 13|value\n FREE|{prev = FREE|next = 14}"];
+CELL_14[style = "filled", fillcolor = "#faa116", label = "index = 14|value\n FREE|{prev = FREE|next = 15}"];
+CELL_15[style = "filled", fillcolor = "#faa116", label = "index = 15|value\n FREE|{prev = FREE|next = 0}"];
+ROOT->CELL_1->CELL_2->CELL_3->CELL_4->CELL_5->CELL_6->CELL_7->CELL_8->CELL_9->CELL_10->CELL_11->CELL_12->CELL_13->CELL_14->CELL_15 [weight = 10000000, color = "#5e67d4"];
+ROOT:head->CELL_1 [style = "bold", color = white];
+ROOT:tail->CELL_8 [style = "bold", color = white];
+CELL_1->CELL_2->CELL_3->CELL_4->CELL_5->CELL_10->CELL_9->CELL_7->CELL_8[style = "bold", color = white];
+FREE:free->CELL_6[style = "bold", color = white];
+}
